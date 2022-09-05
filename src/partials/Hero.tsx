@@ -7,33 +7,41 @@ import {
 const Hero = () => (
   <Section>
     <HeroAvatar
-      socialButtons={''}
+      socialButtons={' '}
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Hi there, I'm <GradientText>Noah</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+        I'm a Developer Advocate, which means a lot of different things, to many people.
+          Mainly I produce technical content for developers to educate them on both high-level concepts, and the
+          {' '}
+          <a className="text-cyan-400 hover:underline" target="_blank" href="https://egghead.io/courses/introduction-to-smart-contracts-with-ethereum-and-solidity-0a40bba0">
+            nitty gritty
+          </a>
+          .
+          Right now I work in the Blockchain space, trying to build a world where access to a global financial system only requires an internet connection.
+          I work at{' '}
+          <a className="text-cyan-400 hover:underline" href="https://phantom.app" target="_blank">
+            Phantom
+          </a>
+          {' '}
+          currently. Before that, I lead the DevRel team at {' '}
+          <a className="text-cyan-400 hover:underline" target="_blank" href="https://quicknode.com">
+            QuickNode
+          </a>
+          .
+          I'm also a proud 
+          {' '}
+          <a className="text-cyan-400 hover:underline" target="_blank" href="https://egghead.io/q/resources-by-noah-hein">
+            Egghead Instructor
+          </a>
+          .
         </>
       }
-      avatar={
-        <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
-          alt="Avatar image"
-          loading="lazy"
-        />
-      }
+      avatar={''}
     />
   </Section>
 );
