@@ -9,12 +9,12 @@ const CTA = () => (
     <Newsletter
       title={
         <>
-          Subscribe to my <GradientText>Newsletters</GradientText>
+          Subscribe to my <GradientText>Newsletter</GradientText>
         </>
       }
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-          esse non molestias eos excepturi, inventore atque cupiditate."
-    />
+      description="I'll be honest with you this button doesn't do anything. But I figured if I put it here
+      it would eventually shame me into plugging this into revue or convertkit or something. If you read this and want to hear from me in newsletter form, tell me as much on Twitter!"
+      />
   </Section>
 );
 
