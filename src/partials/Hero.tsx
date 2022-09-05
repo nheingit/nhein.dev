@@ -7,6 +7,7 @@ import {
 const Hero = () => (
   <Section>
     <HeroAvatar
+      socialButtons={''}
       title={
         <>
           Hi there, I'm <GradientText>Ixartz</GradientText> 👋

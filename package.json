@@ -25,7 +25,6 @@
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "astro": "1.0.0-beta.44",
-    "astro-boilerplate-components": "^1.0.8",
     "astro-eslint-parser": "^0.2.2",
     "astro-imagetools": "^0.6.10",
     "astro-robots-txt": "^0.3.2",
@@ -50,7 +49,10 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.14.2",
+    "algoliasearch": "^4.14.2",
+    "astro-boilerplate-components": "^1.0.8",
     "date-fns": "^2.28.0",
+    "react": "^18.2.0",
     "react-instantsearch-hooks": "^6.32.1"
   },
   "volta": {
