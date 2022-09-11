@@ -41,7 +41,14 @@ const Hero = () => (
           .
         </>
       }
-      avatar={''}
+      avatar={
+      <img
+          className="h-80 w-64"
+          src="/assets/images/lowpoly-man-removebg-preview.png"
+          alt="Avatar image"
+          loading="lazy"
+        />
+      }
     />
   </Section>
 );
