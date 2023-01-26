@@ -54,7 +54,7 @@ But before you start gaining huge unique insights, and sit there writing for hou
 
 That starts with writing daily.
 You will quickly discover that the novel takes and insightful blogposts you read come from someone throwing shit at a wall until they hit a banger.
-![miner inches from striking gold but not hitting it, while someone else pulls through and gets the gold](/assets/images/three-feet-from-gold.jpeg)
+![miner inches from striking gold but not hitting it, while someone else pulls through and gets the gold](/assets/images/three-feet-from-gold.png)
 
 So write some things you're going to take action for that day.
 For me my days look a little something like:
