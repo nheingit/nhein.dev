@@ -15,9 +15,8 @@ const Hero = () => (
       }
       description={
         <>
-          I'm a Developer Advocate, which means a lot of different things, to
-          many people. Mainly I produce technical content for developers to
-          educate them on both high-level concepts, and the{' '}
+          I produce technical content for developers to educate them on both
+          high-level concepts, and the{' '}
           <a
             className="text-cyan-400 hover:underline"
             target="_blank"
@@ -25,33 +24,10 @@ const Hero = () => (
           >
             nitty gritty
           </a>
-          . Right now I work in the Blockchain space, trying to build a world
-          where access to a global financial system only requires an internet
-          connection. I work at{' '}
-          <a
-            className="text-cyan-400 hover:underline"
-            href="https://phantom.app"
-            target="_blank"
-          >
-            Phantom
-          </a>{' '}
-          currently. Before that, I lead the DevRel team at{' '}
-          <a
-            className="text-cyan-400 hover:underline"
-            target="_blank"
-            href="https://quicknode.com"
-          >
-            QuickNode
-          </a>
-          . I'm also a proud{' '}
-          <a
-            className="text-cyan-400 hover:underline"
-            target="_blank"
-            href="https://egghead.io/q/resources-by-noah-hein"
-          >
-            Egghead Instructor
-          </a>
-          .
+          . I also write daily as I believe that a daily writing habit is what
+          brought me above the poverty line during the pandemic. You'll find a
+          collection of my writings here, please let me know if you find any of
+          them useful, I always want to talk to readers.
         </>
       }
       avatar={
