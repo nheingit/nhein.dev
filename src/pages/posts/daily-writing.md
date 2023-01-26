@@ -35,7 +35,7 @@ And I wasn't embarrased to tell anyone who would listen about my story
 
 Here's a cold email I sent [swyx](https://swyx.io) telling him my story, engaging in his work, and then asking for a favor.
 
-![cold email to swyx asking for his book because I had no money](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6v9jhay351p7uy3erydy.png)
+![cold email to swyx asking for his book because I had no money](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/45e23hk5jek6wf8jax2r.png)
 Well long story short swyx gave me the book and things started going my way shortly after. I work in the crypto space, writing, and making videos related to coding.
 And while there are plenty of people that make WAYYY more than me, I've personally increased my take home income by 500% in the last 2 years.
 If you're in a similar situation to where I was in 2020, I know you can do it too.
