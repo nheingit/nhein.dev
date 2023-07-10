@@ -45,7 +45,7 @@ const Navbar = () => {
               </a>
               <a
                 className="mt-2"
-                href="https://twitter.com/nheindev"
+                href="https://twitter.com/thenoahhein"
                 target="_blank"
               >
                 Twitter
