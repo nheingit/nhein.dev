@@ -22,6 +22,7 @@ const page = {
   {page.data.map((post, index) => (
     <>
       <BlogPost 
+	  	client:only="react"
         content={post.rawContent()} 
         frontmatter={{
           title: post.frontmatter.title || '',

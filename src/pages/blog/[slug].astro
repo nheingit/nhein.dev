@@ -17,7 +17,9 @@ interface Post {
 
 export async function getStaticPaths(): Promise<Array<{ params: { slug: string }, props: { post: Post } }>> {
   const posts = await Astro.glob<Post>('../../posts/*.md');
+//@ts-expect-error
   return posts.map((post) => ({
+    //@ts-expect-error
     params: { slug: post.frontmatter.slug || post.file.split('/').pop()?.split('.').shift() || '' },
     props: { post },
   }));
