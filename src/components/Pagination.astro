@@ -1,1 +1,22 @@
- 
+---
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props;
+---
+
+<nav class="flex justify-center space-x-4 my-8">
+  {currentPage > 1 && (
+    <a href={`${baseUrl}${currentPage - 1}`} class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
+      Previous
+    </a>
+  )}
+  {currentPage < totalPages && (
+    <a href={`${baseUrl}${currentPage + 1}`} class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
+      Next
+    </a>
+  )}
+</nav>

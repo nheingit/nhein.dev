@@ -2,26 +2,39 @@
 import Layout from '../layouts/Layout.astro';
 import '@/globals.css';
 import { BlogPost } from '@/components/blog-post';
+import Pagination from '../components/Pagination.astro';
 
-// Get all markdown files from the posts directory
-const posts = await Astro.glob('../posts/*.md');
+const allPosts = await Astro.glob('../posts/*.md');
+
+// Sort posts by date (newest first)
+const sortedPosts = allPosts.sort((a, b) => 
+  new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+);
+
+const page = {
+  data: sortedPosts.slice(0, 5),
+  currentPage: 1,
+  lastPage: Math.ceil(sortedPosts.length / 5)
+};
 ---
 
 <Layout title="Nheindev">
-	{posts.map((post, index) => (
-		<>
-			<BlogPost 
-				content={post.rawContent()} 
-				frontmatter={{
-					title: post.frontmatter.title || '',
-					date: post.frontmatter.date || '',
-					slug: post.frontmatter.slug || '',
-					...post.frontmatter
-				}} 
-			/>
-			{index < posts.length - 1 && (
-				<hr class="my-8 h-px border-0 bg-gray-300" />
-			)}
-		</>
-	))}
+  {page.data.map((post, index) => (
+    <>
+      <BlogPost 
+        content={post.rawContent()} 
+        frontmatter={{
+          title: post.frontmatter.title || '',
+          date: post.frontmatter.date || '',
+          slug: post.frontmatter.slug || '',
+          ...post.frontmatter
+        }} 
+      />
+      {index < page.data.length - 1 && (
+        <hr class="my-8 h-px border-0 bg-gray-300" />
+      )}
+    </>
+  ))}
+  
+  <Pagination currentPage={page.currentPage} totalPages={page.lastPage} baseUrl="/" />
 </Layout>
