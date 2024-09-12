@@ -19,7 +19,7 @@ export async function getStaticPaths({ paginate }: { paginate: (posts: Post[], o
   const allPosts = await Astro.glob<Post>('../posts/*.md');
   
   // Sort posts by date (newest first)
-  const sortedPosts = allPosts.sort((a, b) => 
+  const sortedPosts = allPosts.sort((a: Post, b: Post) => 
     new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
   );
   
@@ -38,12 +38,7 @@ const { page } = Astro.props;
     <>
       <BlogPost 
         content={post.rawContent()} 
-        frontmatter={{
-          title: post.frontmatter.title,
-          date: post.frontmatter.date,
-          slug: post.frontmatter.slug,
-          ...post.frontmatter
-        }} 
+        frontmatter={post.frontmatter}
       />
       {index < page.data.length - 1 && (
         <hr class="my-8 h-px border-0 bg-gray-300" />
