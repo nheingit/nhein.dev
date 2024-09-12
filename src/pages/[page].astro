@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import '@/globals.css';
 import { BlogPost } from '@/components/blog-post';
 import Pagination from '../components/Pagination.astro';
-import type { MarkdownInstance } from 'astro';
 
 interface Post {
   frontmatter: {
@@ -16,10 +15,10 @@ interface Post {
 }
 
 export async function getStaticPaths({ paginate }: { paginate: (posts: Post[], options: { pageSize: number }) => any }) {
-  const allPosts = await Astro.glob<Post>('../posts/*.md');
+  const allPosts: Post[] = await Astro.glob<Post>('../posts/*.md');
   
   // Sort posts by date (newest first)
-  const sortedPosts = allPosts.sort((a: Post, b: Post) => 
+  const sortedPosts: Post[] = allPosts.sort((a: Post, b: Post) => 
     new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
   );
   
@@ -37,6 +36,7 @@ const { page } = Astro.props;
   {page.data.map((post: Post, index: number) => (
     <>
       <BlogPost 
+        client:only="react"
         content={post.rawContent()} 
         frontmatter={post.frontmatter}
       />

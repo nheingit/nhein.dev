@@ -1,9 +1,8 @@
 "use client";
 
 import Markdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import React from 'react';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export interface Frontmatter {
   title: string;
@@ -32,7 +31,7 @@ export function BlogPost({ content, frontmatter }: BlogPostProps) {
       <p className="text-sm text-gray-500">Published on: {formattedDate}</p>
       <Markdown
         components={{
-          code({node, inline, className, children, ...props}: React.HTMLProps<HTMLElement> & { node: any; inline?: boolean }) {
+          code({node, inline, className, children, ...props}: any) {
             const match = /language-(\w+)/.exec(className || '')
             return !inline && match ? (
               <div className="my-6">

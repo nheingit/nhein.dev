@@ -12,6 +12,7 @@ interface Frontmatter {
 interface Post {
   frontmatter: Frontmatter;
   rawContent: () => string;
+  file: string;
 }
 
 export async function getStaticPaths(): Promise<Array<{ params: { slug: string }, props: { post: Post } }>> {
@@ -29,6 +30,6 @@ const { post } = Astro.props;
 
 <Layout title={post.frontmatter.title}>
   <div class="max-w-6xl mx-auto px-4 py-8">
-    <BlogPost content={post.rawContent()} frontmatter={post.frontmatter} />
+    <BlogPost content={post.rawContent()} frontmatter={post.frontmatter} client:only="react" />
   </div>
 </Layout>
