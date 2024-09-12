@@ -3,35 +3,45 @@ import Layout from '../layouts/Layout.astro';
 import '@/globals.css';
 import { BlogPost } from '@/components/blog-post';
 import Pagination from '../components/Pagination.astro';
+import type { MarkdownInstance } from 'astro';
 
-export async function getStaticPaths({ paginate }) {
-  const allPosts = await Astro.glob('../posts/*.md');
+interface Post {
+  frontmatter: {
+    title: string;
+    date: string;
+    slug: string;
+    [key: string]: any; // for other properties
+  };
+  rawContent: () => string;
+}
+
+export async function getStaticPaths({ paginate }: { paginate: (posts: Post[], options: { pageSize: number }) => any }) {
+  const allPosts = await Astro.glob<Post>('../posts/*.md');
   
   // Sort posts by date (newest first)
   const sortedPosts = allPosts.sort((a, b) => 
     new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
   );
-
+  
   // Generate pages, 5 posts per page
   return paginate(sortedPosts, { pageSize: 5 });
 }
 
 const { page } = Astro.props;
 ---
-
 <Layout title="Nheindev">
   {page.currentPage !== 1 && (
     <Pagination currentPage={page.currentPage} totalPages={page.lastPage} baseUrl="/" />
   )}
   
-  {page.data.map((post, index) => (
+  {page.data.map((post: Post, index: number) => (
     <>
       <BlogPost 
         content={post.rawContent()} 
         frontmatter={{
-          title: post.frontmatter.title || '',
-          date: post.frontmatter.date || '',
-          slug: post.frontmatter.slug || '',
+          title: post.frontmatter.title,
+          date: post.frontmatter.date,
+          slug: post.frontmatter.slug,
           ...post.frontmatter
         }} 
       />

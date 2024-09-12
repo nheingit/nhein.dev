@@ -31,7 +31,13 @@ export function BlogPost({ content, frontmatter }: BlogPostProps) {
       <p className="text-sm text-gray-500">Published on: {formattedDate}</p>
       <Markdown
         components={{
-          code({node, inline, className, children, ...props}) {
+          code({node, inline, className, children, ...props}: {
+            node: any;
+            inline?: boolean;
+            className?: string;
+            children: React.ReactNode;
+            [key: string]: any;
+          }) {
             const match = /language-(\w+)/.exec(className || '')
             return !inline && match ? (
               <div className="my-6">
