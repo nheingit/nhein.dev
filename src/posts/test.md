@@ -1,5 +1,8 @@
-# Lorem Ipsum Sample
-
+---
+title: Lorem Ipsum Sample
+date: 2023-04-25
+slug: lorem-ipsum-sample
+---
 ## Introduction
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -1,6 +1,7 @@
 ---
 title: The Future of AI — Possibilities and Challenges
 date: 2023-04-05
+slug: the-future-of-ai
 ---
 
 Artificial Intelligence is rapidly evolving, opening up new possibilities across various industries. From healthcare to finance, AI is transforming the way we work and live.

@@ -2,10 +2,10 @@
 
 import Markdown from "react-markdown";
 
-interface Frontmatter {
+export interface Frontmatter {
   title: string;
   date: string;
-  // Add other frontmatter fields as needed
+  slug: string;
 }
 
 interface BlogPostProps {
@@ -22,8 +22,10 @@ export function BlogPost({ content, frontmatter }: BlogPostProps) {
   const formattedDate = formatDate(frontmatter.date);
 
   return (
-    <article className="prose text-black prose-gray max-w-none">
-      <h1>{frontmatter.title}</h1>
+    <article className="prose lg:prose-lg xl:prose-2xl text-black prose-gray max-w-none">
+      <a href={`/blog/${frontmatter.slug}`} className="no-underline">
+        <h1 className="cursor-pointer hover:underline">{frontmatter.title}</h1>
+      </a>
       <p className="text-sm text-gray-500">Published on: {formattedDate}</p>
       <Markdown>{content}</Markdown>
     </article>

@@ -1,6 +1,7 @@
 ---
 title: 5 Tips for Mastering Productivity
 date: 2023-04-10
+slug: mastering-productivity
 ---
 
 Struggling to stay productive? Here are five tips to help you make the most of your time:

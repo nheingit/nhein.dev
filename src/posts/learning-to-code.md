@@ -1,6 +1,7 @@
 ---
 title: My Journey in Learning to Code
 date: 2023-04-20
+slug: learning-to-code
 ---
 
 # My Journey in Learning to Code

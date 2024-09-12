@@ -10,7 +10,15 @@ const posts = await Astro.glob('../posts/*.md');
 <Layout title="Nheindev">
 	{posts.map((post, index) => (
 		<>
-			<BlogPost content={post.rawContent()} frontmatter={post.frontmatter} />
+			<BlogPost 
+				content={post.rawContent()} 
+				frontmatter={{
+					title: post.frontmatter.title || '',
+					date: post.frontmatter.date || '',
+					slug: post.frontmatter.slug || '',
+					...post.frontmatter
+				}} 
+			/>
 			{index < posts.length - 1 && (
 				<hr class="my-8 h-px border-0 bg-gray-300" />
 			)}

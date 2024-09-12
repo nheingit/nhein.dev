@@ -1,1 +1,27 @@
- 
+---
+import Layout from '../../layouts/Layout.astro';
+import { BlogPost } from '@/components/blog-post';
+import '@/globals.css';
+
+interface Frontmatter {
+  title: string;
+  date: string;
+  slug: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob<{ frontmatter: Frontmatter }>('../../posts/*.md');
+  return posts.map((post) => ({
+    params: { slug: post.frontmatter.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout title={post.frontmatter.title}>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <BlogPost content={post.rawContent()} frontmatter={post.frontmatter} />
+  </div>
+</Layout>

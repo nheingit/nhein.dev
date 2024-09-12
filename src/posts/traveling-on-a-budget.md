@@ -1,6 +1,7 @@
 ---
 title: How to Travel the World on a Budget
 date: 2023-04-15
+slug: traveling-on-a-budget
 ---
 
 Dreaming of exploring the world but worried about the cost? Here are some tips to make your travel dreams a reality without breaking the bank:
