@@ -2,6 +2,7 @@
 title: "Building a Blockchain in Go"
 description: "PT I - The Hello World of Blockchains"
 date: "2021-03-08"
+slug: "build-a-blockchain-in-go"
 ---
 
 Hello everyone!

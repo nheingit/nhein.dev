@@ -9,8 +9,13 @@ interface Frontmatter {
   slug: string;
 }
 
-export async function getStaticPaths() {
-  const posts = await Astro.glob<{ frontmatter: Frontmatter }>('../../posts/*.md');
+interface Post {
+  frontmatter: Frontmatter;
+  rawContent: () => string;
+}
+
+export async function getStaticPaths(): Promise<Array<{ params: { slug: string }, props: { post: Post } }>> {
+  const posts = await Astro.glob<Post>('../../posts/*.md');
   return posts.map((post) => ({
     params: { slug: post.frontmatter.slug },
     props: { post },
@@ -18,6 +23,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const { slug } = Astro.params;
 ---
 
 <Layout title={post.frontmatter.title}>

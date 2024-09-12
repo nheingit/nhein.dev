@@ -2,6 +2,7 @@
 title: "Putting Yourself Out There"
 description: "The importance of self-promotion and visibility in your career"
 date: "2022-02-22"
+slug: "putting-yourself-out-there"
 ---
 Today I learned the value of putting yourself out there. I had multiple opportunities that came to me recently that I thought were entirely impossible. I wouldn’t have been able to dream them up, they were so beneficial for my current situation. There are many ways that you can put yourself “out there”, however the way in which I did so was through networking. Plain old people talking to people.
 

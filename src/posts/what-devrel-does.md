@@ -2,6 +2,7 @@
 title: "What Does DevRel Do?"
 description: "An exploration of the Developer Relations role and its importance in tech"
 date: "2022-03-10"
+slug: "what-devrel-does"
 ---
 
 ## Preface

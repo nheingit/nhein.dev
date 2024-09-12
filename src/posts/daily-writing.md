@@ -2,6 +2,7 @@
 title: Daily Writing 
 description: In this post I talk about what daily writing has done for me, and how others can start
 date: "2023-01-24"
+slug: "daily-writing"
 ---
 ## Why should you write daily
 Because it brings serendipity into the world. For you as a person specificially.

@@ -2,6 +2,7 @@
 title: Getting Yourself Acquainted with TypeORM
 description: First steps to getting TypeORM set up
 pubDate: 2021-02-13
+slug: "getting-acquainted-with-typeorm"
 ---
 
 # # Intro

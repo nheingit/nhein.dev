@@ -2,6 +2,7 @@
 title: "Ruby Vector Search"
 description: "Implementing vector search functionality in Ruby"
 date: "2023-08-05"
+slug: "ruby-vector-search"
 ---
 
 ## Building an AI Vectorsearch Q/A App with Rails
